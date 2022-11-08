@@ -6,8 +6,13 @@
 	import '../reset.css';
 </script>
 
+<svelte:head>
+	<title>Orange Juice Evolution</title>
+</svelte:head>
+
 <div class="container-geral">
 	<div class="imagem-lateral">
+		<p>Nós te ajudamos a trilhar pelo mundo da tecnologia</p>
 		<img src="/images/login-image.png" alt="Mulher estudando em seu Notebook" />
 	</div>
 
@@ -22,6 +27,20 @@
 	.container-geral {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	.imagem-lateral p {
+		font-family: 'Reem Kufi';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 40px;
+		text-align: center;
+		line-height: 60px;
+		color: #ffffff;
+		position: absolute;
+		width: 25%;
+		top: 6rem;
+		left: 2em;
 	}
 
 	.imagem-lateral img {
