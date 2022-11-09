@@ -6,6 +6,10 @@
 	import '../../reset.css';
 </script>
 
+<svelte:head>
+	<title>Orange Juice Evolution - Nossas Trilhas</title>
+</svelte:head>
+
 <div class="container">
 	<div class="parceiros">
 		<p>PARCERIAS</p>
@@ -19,7 +23,7 @@
 		<nav>
 			<Nav />
 		</nav>
-		<img src="/images/orangejuice-logo.png" alt="Logo da comunidade Orange Juice" />
+		<img src="/images/evolutionlogo.png" alt="Logo da comunidade Orange Juice" />
 		<p>
 			O Orange Evolution consiste em trilhas totalmente gratuitas para que você possa iniciar a sua
 			carreira na tecnologia. Você terá acesso a vídeos, lives, artigos, apostilas e até cursos
@@ -36,6 +40,7 @@
 <style>
 	.container {
 		display: flex;
+		height: calc(100vh - 3px);
 	}
 
 	.parceiros {
@@ -45,6 +50,7 @@
 		height: 100vh;
 		justify-content: space-evenly;
 		margin: 0;
+		position: fixed;
 		width: 20%;
 	}
 
@@ -73,7 +79,7 @@
 
 	.conteudo {
 		background-color: #f5efeb;
-		height: 100vh;
+		margin: 0 5% 0 15%;
 		width: 80%;
 	}
 
@@ -85,9 +91,9 @@
 
 	.conteudo img {
 		display: block;
-		margin: 188px auto 104px auto;
+		margin: 142px auto 56px auto;
 		text-align: center;
-		width: 400px;
+		width: 280px;
 	}
 
 	.conteudo p {
@@ -99,8 +105,8 @@
 		line-height: 38px;
 		margin: 48px auto;
 		text-align: center;
-		width: 55%;
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		width: 55%;
 	}
 
 	.trilhas {

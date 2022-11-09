@@ -4,9 +4,6 @@
 
 	import '../app.css';
 	import '../reset.css';
-
-	const abreChave = '{';
-	const fechaChave = '}';
 </script>
 
 <svelte:head>
@@ -15,13 +12,13 @@
 
 <div class="container-geral">
 	<div class="imagem-lateral">
-		<p>{abreChave}Nós te ajudamos a trilhar pelo mundo da tecnologia{fechaChave}</p>
-		<img src="/images/login-image.png" alt="Mulher estudando em seu Notebook" />
+		<p>&lbrace;Nós te ajudamos a trilhar pelo mundo da tecnologia&rbrace;</p>
+		<img src="/images/login-image.png" alt="Mulher estudando em notebook" />
 	</div>
 
 	<div class="container-conteudo">
 		<Nav />
-		<img src="/images/orangejuice-logo.png" alt="Logo da comunidade Orange Juice" />
+		<img src="/images/evolutionlogo.png" alt="Logo da comunidade Orange Juice" />
 		<Login />
 	</div>
 </div>
@@ -29,35 +26,42 @@
 <style>
 	.container-geral {
 		display: flex;
+		height: calc(100vh -3px);
 		justify-content: space-between;
 	}
 
+	.imagem-lateral {
+		position: fixed;
+		width: 32%;
+	}
+
 	.imagem-lateral p {
+		color: #ffffff;
 		font-family: 'Reem Kufi';
+		font-size: 40px;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 40px;
-		text-align: center;
-		line-height: 60px;
-		color: #ffffff;
-		position: absolute;
-		width: 25%;
-		top: 6rem;
 		left: 2em;
+		line-height: 60px;
+		position: absolute;
+		text-align: center;
+		top: 6rem;
+		width: 80%;
 	}
 
 	.imagem-lateral img {
-		height: 100vh;
+		height: calc(100vh - 3px);
+		width: 100%;
 	}
 
 	.container-conteudo {
-		width: 33%;
-		margin: 0 auto;
+		margin: 0 15% 0 45%;
+		width: 40%;
 	}
 	.container-conteudo img {
 		display: block;
-		width: 240px;
-		margin: 72px auto;
+		margin: 36px auto;
 		text-align: center;
+		width: 240px;
 	}
 </style>

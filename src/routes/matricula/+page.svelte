@@ -1,9 +1,6 @@
 <script>
 	import Cadastro from '$lib/components/Cadastro.svelte';
 	import Nav from '$lib/components/Nav.svelte';
-
-	const abreChave = '{';
-	const fechaChave = '}';
 </script>
 
 <svelte:head>
@@ -12,7 +9,7 @@
 
 <div class="container-geral">
 	<div class="imagem-lateral">
-		<p>{abreChave}Nós te ajudamos a trilhar pelo mundo da tecnologia{fechaChave}</p>
+		<p>&lbrace;Nós te ajudamos a trilhar pelo mundo da tecnologia&rbrace;</p>
 		<img src="/images/login-image.png" alt="Mulher estudando em seu Notebook" />
 	</div>
 
@@ -26,28 +23,35 @@
 	.container-geral {
 		display: flex;
 		justify-content: space-between;
+		height: 100vh;
+	}
+
+	.imagem-lateral {
+		position: fixed;
+		width: 32%;
 	}
 
 	.imagem-lateral p {
+		color: #ffffff;
 		font-family: 'Reem Kufi';
 		font-style: normal;
 		font-weight: 400;
 		font-size: 40px;
-		text-align: center;
-		line-height: 60px;
-		color: #ffffff;
-		position: absolute;
-		width: 25%;
-		top: 6rem;
 		left: 2em;
+		line-height: 60px;
+		position: absolute;
+		text-align: center;
+		top: 6rem;
+		width: 80%;
 	}
 
 	.imagem-lateral img {
-		height: 100vh;
+		height: calc(100vh - 3px);
+		width: 100%;
 	}
 
 	.container-conteudo {
-		width: 33%;
-		margin: 0 auto;
+		margin: 0 15% 0 45%;
+		width: 40%;
 	}
 </style>
