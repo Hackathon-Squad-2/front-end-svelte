@@ -7,7 +7,7 @@
 <style>
 	nav {
 		display: flex;
-		margin-top: 72px;
+		margin-top: 40px;
 		justify-content: space-between;
 	}
 

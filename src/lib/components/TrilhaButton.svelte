@@ -11,7 +11,7 @@
 <style>
 	button {
 		background-color: #f2e0d3;
-		border: none;
+		border: 5px solid #ffffff;
 		border-radius: 30px;
 		box-shadow: 0px 4px 4px #c57339;
 		height: 184px;
@@ -27,7 +27,6 @@
 		line-height: 52px;
 		text-align: center;
 		text-decoration: none;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		vertical-align: middle;
 	}
 </style>

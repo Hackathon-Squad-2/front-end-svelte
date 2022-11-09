@@ -18,30 +18,28 @@
 		box-shadow: 0px 4px 4px #c57339;
 		display: flex;
 		flex-direction: column;
-		margin: 32px auto;
+		margin: 40px auto 0 auto;
 		padding: 56px;
 		width: 50%;
 	}
 
 	.titulo {
-		color: #ffffff;
+		color: #c57339;
 		font-family: 'Reem Kufi';
 		font-size: 40px;
 		font-style: normal;
 		font-weight: 400;
 		text-align: center;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 
 	label {
-		color: #ffffff;
+		color: #c57339;
 		font-family: 'Reem Kufi';
 		font-size: 29px;
 		font-style: normal;
 		font-weight: 400;
 		margin: 32px auto 8px auto;
 		text-align: left;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		width: 85%;
 	}
 
@@ -62,7 +60,7 @@
 		border-color: #ffffff;
 		border-radius: 30px;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		color: #ffffff;
+		color: #c57339;
 		font-family: 'Reem Kufi';
 		font-size: 32px;
 		font-style: normal;
@@ -70,7 +68,6 @@
 		margin: 56px auto 40px auto;
 		text-align: center;
 		width: 40%;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 
 	button:hover {
