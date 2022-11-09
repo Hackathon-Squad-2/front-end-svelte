@@ -4,6 +4,9 @@
 
 	import '../app.css';
 	import '../reset.css';
+
+	const abreChave = '{';
+	const fechaChave = '}';
 </script>
 
 <svelte:head>
@@ -12,13 +15,13 @@
 
 <div class="container-geral">
 	<div class="imagem-lateral">
-		<p>Nós te ajudamos a trilhar pelo mundo da tecnologia</p>
+		<p>{abreChave}Nós te ajudamos a trilhar pelo mundo da tecnologia{fechaChave}</p>
 		<img src="/images/login-image.png" alt="Mulher estudando em seu Notebook" />
 	</div>
 
 	<div class="container-conteudo">
 		<Nav />
-		<img src="/images/orange-logo.png" alt="Logo da comunidade Orange Juice" />
+		<img src="/images/orangejuice-logo.png" alt="Logo da comunidade Orange Juice" />
 		<Login />
 	</div>
 </div>
@@ -53,8 +56,7 @@
 	}
 	.container-conteudo img {
 		display: block;
-		height: 133px;
-		width: 210px;
+		width: 240px;
 		margin: 72px auto;
 		text-align: center;
 	}

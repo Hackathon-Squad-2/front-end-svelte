@@ -1,4 +1,5 @@
 <script>
+	import Nav from '$lib/components/Nav.svelte';
 	import TrilhaButton from '$lib/components/TrilhaButton.svelte';
 
 	import '../../app.css';
@@ -7,23 +8,27 @@
 
 <div class="container">
 	<div class="parceiros">
-		<img src="/images/fcamara-logo.png" alt="Logo da FCamara" />
-		<img src="/images/rocketseat-logo.png" alt="Logo da Rocket Seat" />
-		<img src="/images/alura-logo.png" alt="Logo da Alura" />
-		<img src="/images/cubosacademy-logo.png" alt="Logo da Cubos Academy" />
+		<p>PARCERIAS</p>
+		<img class="fcamara" src="/images/fcamara-logo.png" alt="Logo da FCamara" />
+		<img class="rocket" src="/images/rocketseat-logo.png" alt="Logo da Rocket Seat" />
+		<img class="alura" src="/images/alura-logo.png" alt="Logo da Alura" />
+		<img class="cubos" src="/images/cubosacademy-logo.png" alt="Logo da Cubos Academy" />
 	</div>
 
 	<div class="conteudo">
-		<img src="/images/orange-logo.png" alt="Logo da comunidade Orange Juice" />
+		<nav>
+			<Nav />
+		</nav>
+		<img src="/images/orangejuice-logo.png" alt="Logo da comunidade Orange Juice" />
 		<p>
 			O Orange Evolution consiste em trilhas totalmente gratuitas para que você possa iniciar a sua
 			carreira na tecnologia. Você terá acesso a vídeos, lives, artigos, apostilas e até cursos
 			gratuitos, além desses conteúdos serem da Orange Juice, de parceiros e empresas que confiamos.
 		</p>
 		<div class="trilhas">
-			<TrilhaButton url="/fullstack" text="FullStack" />
-			<TrilhaButton url="/uxui" text="UX/UI&ensp;Design" />
-			<TrilhaButton url="/qa" text="QA&emsp;Quality&ensp;Assurance" />
+			<TrilhaButton url="/fullstack" linha1="Full" linha2="Stack" />
+			<TrilhaButton url="/uxui" linha1="UX/UI" linha2="Design" />
+			<TrilhaButton url="/qa" linha1="QA" linha2="(Quality&ensp;Assurance)" />
 		</div>
 	</div>
 </div>
@@ -34,49 +39,74 @@
 	}
 
 	.parceiros {
+		background-color: #c57339;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-evenly;
-		background-color: #f2e0d3;
-		width: 20%;
 		height: 100vh;
+		justify-content: space-evenly;
 		margin: 0;
+		width: 20%;
+	}
+
+	.parceiros p {
+		color: #ffffff;
+		font-family: 'Reem Kufi';
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		text-align: center;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 	}
 
 	.parceiros img {
-		width: 80%;
 		margin: 0 auto;
+		width: 80%;
+	}
+
+	.parceiros .alura {
+		width: 60%;
+	}
+
+	.parceiros .cubos {
+		width: 60%;
 	}
 
 	.conteudo {
 		background-color: #f5efeb;
-		width: 80%;
 		height: 100vh;
+		width: 80%;
+	}
+
+	nav {
+		position: absolute;
+		right: 120px;
+		width: 40%;
 	}
 
 	.conteudo img {
 		display: block;
-		width: 230px;
+		margin: 188px auto 104px auto;
 		text-align: center;
-		margin: 104px auto;
+		width: 400px;
 	}
 
 	.conteudo p {
+		color: #c57339;
 		font-family: 'Reem Kufi';
+		font-size: 25px;
 		font-style: normal;
 		font-weight: 400;
-		font-size: 25px;
 		line-height: 38px;
-		text-align: center;
-		color: #c57339;
-		width: 55%;
 		margin: 48px auto;
+		text-align: center;
+		width: 55%;
+		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 
 	.trilhas {
 		display: flex;
-		margin: 148px auto;
 		justify-content: space-evenly;
+		margin: 96px auto;
 		width: 80%;
 	}
 </style>
