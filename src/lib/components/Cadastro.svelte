@@ -1,15 +1,42 @@
-<form class="card">
-	<img src="/images/orangejuice-cadastro.png" alt="Logo da comunidade Orange Juice" />
+<script lang="ts">
+	//import { api } from '../../services/api';
+
+	//let name: string = '';
+	//let email: string = '';
+	//let password: string = '';
+
+	//const submit = async () => {
+	//	if (!name || !email || !password) return;
+
+	//const response = await api.post('/users/auth/login', {
+	//	email,
+	//	password
+	//});
+
+	//const { user, token } = response.data;
+
+	// escreve no `writable` (storage)
+
+	//console.log(user);
+	//console.log(token);
+
+	// Adiciona o token a api, para autenticar requisições
+	//api.defaults.headers.common.authorization = `Bearer ${token}`;
+	//};
+</script>
+
+<div class="card">
+	<img src="/images/evolutionlogo-cadastro.png" alt="Logo da comunidade Orange Juice" />
 	<input id="user" type="text" placeholder="(icon)Nome" />
 	<input id="email" type="email" placeholder="(icon) E-mail" />
 	<input id="password" type="password" placeholder="(icon)Senha" />
-	<button type="input">Cadastrar</button>
+	<button>Cadastrar</button>
 	<p>
 		Ao clicar em "cadastrar”, declaro que concordo com as <a href="/">Políticas de Privacidade</a>
 		e os <a href="/">Termos de Uso</a> da Orange Juice.
 	</p>
 	<p>Já possui uma conta? Fazer <a href="/">Login</a></p>
-</form>
+</div>
 
 <style>
 	.card {
@@ -18,13 +45,13 @@
 		box-shadow: 0px 4px 4px #c57339;
 		display: flex;
 		flex-direction: column;
-		margin: 128px auto;
-		padding: 56px;
+		margin: 72px auto 0 auto;
+		padding: 36px;
 		width: 60%;
 	}
 
 	img {
-		margin: 32px auto;
+		margin: 16px auto;
 		width: 210px;
 	}
 
@@ -37,7 +64,7 @@
 		font-size: 24px;
 		font-weight: 600;
 		height: 56px;
-		margin: 24px auto;
+		margin: 16px auto;
 		padding: 0 8px;
 		width: 80%;
 	}
@@ -56,16 +83,15 @@
 		border-color: #ffffff;
 		border-radius: 30px;
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-		color: #ffffff;
+		color: #c57339;
 		font-family: 'Reem Kufi';
 		font-size: 25px;
 		font-style: normal;
-		font-weight: 600;
-		margin: 56px auto 40px auto;
+		font-weight: 400;
+		margin: 28px auto 16px auto;
 		text-align: center;
 		width: 40%;
 		height: 64px;
-		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	}
 
 	button:hover {
