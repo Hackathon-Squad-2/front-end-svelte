@@ -1,39 +1,46 @@
 <script lang="ts">
-	//import { api } from '../../services/api';
+	import { api } from '../../services/api';
 
-	//let name: string = '';
-	//let email: string = '';
-	//let password: string = '';
+	let name = '';
+	let email = '';
+	let password = '';
+	let erro = '';
 
-	//const submit = async () => {
-	//	if (!name || !email || !password) return;
+	const submit = async () => {
+		if (!name || !email || !password) {
+			erro = 'Todos os campos devem ser preenchidos.';
+			return;
+		}
 
-	//const response = await api.post('/users/auth/login', {
-	//	email,
-	//	password
-	//});
+		erro = '';
+		const response = await api.post('/users/auth/login', {
+			email,
+			password
+		});
 
-	//const { user, token } = response.data;
+		const { user, token } = response.data;
 
-	// escreve no `writable` (storage)
+		// escreve no `writable` (storage)
 
-	//console.log(user);
-	//console.log(token);
-
-	// Adiciona o token a api, para autenticar requisições
-	//api.defaults.headers.common.authorization = `Bearer ${token}`;
-	//};
+		console.log(user);
+		console.log(token);
+		// Adiciona o token a api, para autenticar requisições
+		api.defaults.headers.common.authorization = `Bearer ${token}`;
+	};
 </script>
 
 <div class="card">
 	<img src="/images/evolutionlogo-cadastro.png" alt="Logo da comunidade Orange Juice" />
-	<input id="user" type="text" placeholder="(icon)Nome" />
-	<input id="email" type="email" placeholder="(icon) E-mail" />
-	<input id="password" type="password" placeholder="(icon)Senha" />
-	<button>Cadastrar</button>
+	<input id="user" type="text" placeholder="(icon)Nome" bind:value={name} />
+	<input id="email" type="email" placeholder="(icon) E-mail" bind:value={email} />
+	<input id="password" type="password" placeholder="(icon)Senha" bind:value={password} />
+	<p class="erro" contenteditable="true" bind:innerHTML={erro} />
+	<button on:click={submit}>Cadastrar</button>
 	<p>
-		Ao clicar em "cadastrar”, declaro que concordo com as <a href="/">Políticas de Privacidade</a>
-		e os <a href="/">Termos de Uso</a> da Orange Juice.
+		Ao clicar em "cadastrar”, declaro que concordo com as <a href="/privacy"
+			>Políticas de Privacidade</a
+		>
+		e os <a href="/privacy">Termos de Uso</a> da Orange Juice.
 	</p>
 	<p>Já possui uma conta? Fazer <a href="/">Login</a></p>
 </div>
@@ -45,7 +52,7 @@
 		box-shadow: 0px 4px 4px #c57339;
 		display: flex;
 		flex-direction: column;
-		margin: 72px auto 0 auto;
+		margin: 64px auto 0 auto;
 		padding: 36px;
 		width: 60%;
 	}
@@ -53,6 +60,14 @@
 	img {
 		margin: 16px auto;
 		width: 210px;
+	}
+
+	.erro {
+		color: darkred;
+		font-family: 'Reem Kufi';
+		font-size: 18px;
+		font-weight: 600;
+		text-align: center;
 	}
 
 	input {
@@ -88,7 +103,7 @@
 		font-size: 25px;
 		font-style: normal;
 		font-weight: 400;
-		margin: 28px auto 16px auto;
+		margin: 16px auto 8px auto;
 		text-align: center;
 		width: 40%;
 		height: 64px;
@@ -104,7 +119,7 @@
 		font-style: normal;
 		font-weight: 600;
 		font-size: 18px;
-		line-height: 27px;
+		line-height: 24px;
 		text-align: center;
 		margin: 8px auto;
 	}
