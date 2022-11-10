@@ -1,6 +1,9 @@
 <script>
 	import Cadastro from '$lib/components/Cadastro.svelte';
 	import Nav from '$lib/components/Nav.svelte';
+
+	import '../../reset.css';
+	import '../../app.css';
 </script>
 
 <svelte:head>

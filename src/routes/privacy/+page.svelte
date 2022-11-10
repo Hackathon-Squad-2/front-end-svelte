@@ -1,3 +1,7 @@
+<script>
+	import '../app.css';
+</script>
+
 <img src="/images/manutencao.gif" alt="Pagina em manutenção" />
 <p>Pedimos desculpas o transtorno.</p>
 <br />
