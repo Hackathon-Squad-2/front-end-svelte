@@ -41,11 +41,11 @@
 		font-size: 40px;
 		font-style: normal;
 		font-weight: 400;
-		left: 2em;
+		left: 2rem;
 		line-height: 60px;
 		position: absolute;
 		text-align: center;
-		top: 6rem;
+		top: 5rem;
 		width: 80%;
 	}
 
@@ -63,5 +63,81 @@
 		margin: 36px auto;
 		text-align: center;
 		width: 240px;
+	}
+
+	@media screen and (max-width: 1827px) {
+		.imagem-lateral p {
+			font-size: 32px;
+		}
+	}
+
+	@media screen and (max-width: 1600px) {
+		.imagem-lateral p {
+			top: 3rem;
+		}
+
+		.container-conteudo img {
+			width: 200px;
+		}
+	}
+
+	@media screen and (max-width: 1462px) {
+		.imagem-lateral p {
+			font-size: 28px;
+		}
+	}
+
+	@media screen and (max-width: 1366px) {
+		.imagem-lateral p {
+			top: 2.5rem;
+			line-height: 36px;
+		}
+
+		.container-conteudo img {
+			margin: 24px auto 16px auto;
+			width: 160px;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		.imagem-lateral p {
+			font-size: 24px;
+			line-height: 36px;
+		}
+
+		.container-conteudo img {
+			margin: 18px auto;
+		}
+	}
+
+	@media screen and (max-width: 1096px) {
+		.imagem-lateral p {
+			font-size: 20px;
+			line-height: 36px;
+		}
+	}
+
+	@media screen and (max-width: 913px) {
+		.imagem-lateral p {
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (max-width: 822px) {
+		.imagem-lateral p {
+			font-size: 16px;
+			line-height: 36px;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.imagem-lateral p {
+			top: 1.5rem;
+		}
+
+		.container-conteudo img {
+			margin: 16px auto;
+			width: 120px;
+		}
 	}
 </style>

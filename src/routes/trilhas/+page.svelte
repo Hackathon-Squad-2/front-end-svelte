@@ -103,7 +103,7 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: 38px;
-		margin: 48px auto;
+		margin: 0 auto;
 		text-align: center;
 		text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		width: 55%;
@@ -114,5 +114,58 @@
 		justify-content: space-evenly;
 		margin: 96px auto;
 		width: 80%;
+	}
+
+	@media screen and (max-width: 1600px) {
+		.conteudo img {
+			margin: 96px auto 48px auto;
+		}
+
+		.trilhas {
+			margin-top: 48px;
+		}
+	}
+
+	@media screen and (max-width: 1366px) {
+		.conteudo img {
+			width: 184px;
+			margin-bottom: 32px;
+		}
+
+		.conteudo p {
+			font-size: 20px;
+		}
+
+		.trilhas {
+			margin-top: 32px;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		.conteudo p {
+			line-height: 32px;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.conteudo img {
+			width: 160px;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.conteudo img {
+			margin: 48px auto 16px auto;
+		}
+
+		.conteudo p {
+			font-size: 18px;
+			line-height: 28px;
+			width: 75%;
+		}
+
+		.trilhas {
+			margin-top: 20px;
+		}
 	}
 </style>

@@ -53,8 +53,8 @@
 		display: flex;
 		flex-direction: column;
 		margin: 64px auto 0 auto;
-		padding: 36px;
-		width: 60%;
+		padding: 0 36px;
+		width: 75%;
 	}
 
 	img {
@@ -80,7 +80,7 @@
 		font-weight: 600;
 		height: 56px;
 		margin: 16px auto;
-		padding: 0 8px;
+		padding: 8px;
 		width: 80%;
 	}
 
@@ -90,6 +90,9 @@
 
 	input:focus {
 		outline: none;
+	}
+	.erro {
+		height: 18px;
 	}
 
 	button {
@@ -103,7 +106,7 @@
 		font-size: 25px;
 		font-style: normal;
 		font-weight: 400;
-		margin: 16px auto 8px auto;
+		margin: 6px auto;
 		text-align: center;
 		width: 40%;
 		height: 64px;
@@ -127,5 +130,105 @@
 	p a {
 		color: #f98837;
 		text-decoration: none;
+	}
+
+	@media screen and (max-width: 1600px) {
+		.card {
+			margin-top: 56px;
+		}
+
+		img {
+			width: 160px;
+			margin-bottom: 0;
+		}
+
+		input {
+			height: 32px;
+		}
+	}
+
+	@media screen and (max-width: 1366px) {
+		.card {
+			margin-top: 32px;
+		}
+
+		img {
+			width: 120px;
+		}
+
+		input {
+			font-size: 20px;
+			height: 24px;
+			margin-bottom: 8px;
+		}
+
+		.erro {
+			height: 16px;
+			font-size: 16px;
+		}
+
+		button {
+			font-size: 24px;
+			height: 48px;
+		}
+
+		p,
+		p a {
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+
+	@media screen and (max-width: 1366px) {
+		input {
+			height: 20px;
+			font-size: 18px;
+		}
+
+		button {
+			font-size: 20px;
+			height: 40px;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		.card {
+			margin-top: 24px;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		button {
+			width: 45%;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		img {
+			width: 80px;
+		}
+
+		input {
+			font-size: 18px;
+			height: 18px;
+			margin: 6px auto;
+		}
+
+		.erro {
+			height: 12px;
+			font-size: 12px;
+			margin: 6px auto;
+		}
+
+		button {
+			margin: 0 auto;
+		}
+
+		p,
+		p a {
+			font-size: 14px;
+			line-height: 16px;
+			margin-bottom: 6px;
+		}
 	}
 </style>

@@ -34,4 +34,36 @@
 		padding: 0 16px;
 		width: 216px;
 	}
+
+	@media screen and (max-width: 1366px) {
+		nav a {
+			font-size: 24px;
+		}
+
+		input {
+			height: 40px;
+		}
+	}
+
+	@media screen and (max-width: 1152px) {
+		nav a {
+			font-size: 20px;
+			margin-right: 8px;
+		}
+
+		input {
+			width: 184px;
+		}
+	}
+
+	@media screen and (max-width: 1152px) {
+		nav a {
+			font-size: 18px;
+			margin-right: 6px;
+		}
+
+		input {
+			width: 160px;
+		}
+	}
 </style>

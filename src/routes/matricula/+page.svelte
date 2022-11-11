@@ -40,11 +40,11 @@
 		font-style: normal;
 		font-weight: 400;
 		font-size: 40px;
-		left: 2em;
+		left: 2rem;
 		line-height: 60px;
 		position: absolute;
 		text-align: center;
-		top: 6rem;
+		top: 5rem;
 		width: 80%;
 	}
 
@@ -56,5 +56,63 @@
 	.container-conteudo {
 		margin: 0 15% 0 45%;
 		width: 40%;
+	}
+
+	@media screen and (max-width: 1827px) {
+		.imagem-lateral p {
+			font-size: 32px;
+		}
+	}
+
+	@media screen and (max-width: 1600px) {
+		.imagem-lateral p {
+			top: 3rem;
+		}
+	}
+
+	@media screen and (max-width: 1462px) {
+		.imagem-lateral p {
+			font-size: 28px;
+		}
+	}
+
+	@media screen and (max-width: 1366px) {
+		.imagem-lateral p {
+			top: 2.5rem;
+			line-height: 36px;
+		}
+	}
+
+	@media screen and (max-width: 1280px) {
+		.imagem-lateral p {
+			font-size: 24px;
+			line-height: 36px;
+		}
+	}
+
+	@media screen and (max-width: 1096px) {
+		.imagem-lateral p {
+			font-size: 20px;
+			line-height: 36px;
+		}
+	}
+
+	@media screen and (max-width: 913px) {
+		.imagem-lateral p {
+			font-size: 18px;
+		}
+	}
+
+	@media screen and (max-width: 822px) {
+		.imagem-lateral p {
+			font-size: 16px;
+			line-height: 36px;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		.imagem-lateral p {
+			top: 1.5rem;
+		}
 	}
 </style>

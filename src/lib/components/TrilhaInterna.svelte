@@ -6,7 +6,7 @@
 
 <button>
 	<p>CURSO</p>
-	<a href={url}>{linha1}<br />{linha2}</a>
+	<a href={url}>{linha1}<br />{linha2}</a><br />
 	<progress />
 </button>
 
@@ -34,5 +34,40 @@
 
 	progress {
 		margin: 0 8px;
+	}
+
+	@media screen and (max-width: 1600px) {
+		button {
+			height: 176px;
+		}
+	}
+
+	@media screen and (max-width: 1366px) {
+		button {
+			height: 152px;
+			width: 200px;
+		}
+
+		a {
+			font-size: 28px;
+			line-height: 32px;
+		}
+	}
+
+	@media screen and (max-width: 800px) {
+		button {
+			height: 120px;
+			width: 160px;
+		}
+
+		p {
+			font-size: 12px;
+			margin-bottom: 6px;
+		}
+
+		a {
+			font-size: 20px;
+			line-height: 18px;
+		}
 	}
 </style>
