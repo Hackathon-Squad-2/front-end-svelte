@@ -1,9 +1,19 @@
 <div class="card">
 	<p class="titulo">Login</p>
 	<label class="usuario" for="user">Usuário</label>
-	<input id="user" type="text" placeholder="user" />
+	<input
+		id="user"
+		type="text"
+		placeholder="
+  &#128100;"
+	/>
 	<label for="password">Senha</label>
-	<input id="password" type="password" placeholder="password" />
+	<input
+		id="password"
+		type="password"
+		placeholder="
+  &#128477;"
+	/>
 	<button type="input">Entrar</button>
 	<div class="rodape">
 		<a href="/matricula">Criar conta</a>

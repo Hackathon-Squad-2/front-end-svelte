@@ -31,9 +31,21 @@
 
 <div class="card">
 	<img src="/images/evolutionlogo-cadastro.png" alt="Logo da comunidade Orange Juice" />
-	<input id="user" type="text" placeholder="(icon)Nome" bind:value={name} />
-	<input id="email" type="email" placeholder="(icon) E-mail" bind:value={email} />
-	<input id="password" type="password" placeholder="(icon)Senha" bind:value={password} />
+	<input id="user" type="text" placeholder="&#128100; Nome" bind:value={name} />
+	<input
+		id="email"
+		type="email"
+		placeholder="
+  &#9993; E-mail"
+		bind:value={email}
+	/>
+	<input
+		id="password"
+		type="password"
+		placeholder="
+  &#128477; Senha"
+		bind:value={password}
+	/>
 	<p class="erro" contenteditable="true" bind:innerHTML={erro} />
 	<button on:click={submit}>Cadastrar</button>
 	<p>
