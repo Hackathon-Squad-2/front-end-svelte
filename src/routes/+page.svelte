@@ -19,7 +19,18 @@
 	<div class="container-conteudo">
 		<Nav />
 		<img src="/images/evolutionlogo.png" alt="Logo da comunidade Orange Juice" />
-		<Login />
+		<div class="card">
+			<p class="titulo">Login</p>
+			<label class="usuario" for="user">Usuário</label>
+			<input class="card-input" id="user" type="text" placeholder="&#128100;" />
+			<label class="senha" for="password">Senha</label>
+			<input class="card-input" id="password" type="password" placeholder="&#128477;" />
+			<button class="card-button" type="input">Entrar</button>
+			<div class="card-rodape">
+				<a href="/matricula">Criar conta</a>
+				<p>Esqueceu sua senha?</p>
+			</div>
+		</div>
 	</div>
 </div>
 
@@ -65,6 +76,82 @@
 		width: 240px;
 	}
 
+	.card {
+		background-color: #f2e0d3;
+		border-radius: 56px;
+		box-shadow: 0px 4px 4px #c57339;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		padding: 56px;
+		width: 50%;
+	}
+
+	.titulo {
+		color: #c57339;
+		font-family: 'Reem Kufi';
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	.usuario,
+	.senha {
+		color: #c57339;
+		font-family: 'Reem Kufi';
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 400;
+		margin: 32px auto 8px auto;
+		text-align: left;
+		width: 85%;
+	}
+
+	.card-input {
+		border: none;
+		border-radius: 28px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		font-size: 24px;
+		height: 56px;
+		margin: 0 auto;
+		padding: 0 16px;
+		width: 85%;
+	}
+
+	.card-button {
+		background-color: #f2e0d3;
+		border: 3px solid #ffffff;
+		border-color: #ffffff;
+		border-radius: 30px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		color: #c57339;
+		font-family: 'Reem Kufi';
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 600;
+		margin: 56px auto 40px auto;
+		text-align: center;
+		width: 160px;
+	}
+
+	.card-button:hover {
+		cursor: pointer;
+	}
+
+	.card-rodape {
+		color: #000000;
+		display: flex;
+		font-family: 'Reem Kufi';
+		font-size: 18px;
+		justify-content: space-between;
+	}
+
+	.card-rodape a {
+		color: #000000;
+		text-decoration: none;
+	}
+
 	@media screen and (max-width: 1827px) {
 		.imagem-lateral p {
 			font-size: 32px;
@@ -78,6 +165,25 @@
 
 		.container-conteudo img {
 			width: 200px;
+		}
+
+		.card {
+			padding: 28px;
+		}
+
+		.usuario,
+		.senha {
+			font-size: 24px;
+			margin: 24px auto 8px auto;
+		}
+
+		.card-input {
+			height: 48px;
+		}
+
+		.card-button {
+			font-size: 24px;
+			margin: 32px auto;
 		}
 	}
 
@@ -97,6 +203,33 @@
 			margin: 24px auto 16px auto;
 			width: 160px;
 		}
+
+		.card {
+			padding: 20px 28px;
+		}
+
+		.titulo {
+			font-size: 32px;
+		}
+
+		.usuario,
+		.senha {
+			font-size: 24px;
+			margin: 16px auto 8px auto;
+		}
+
+		.card-input {
+			height: 40px;
+		}
+
+		.card-button {
+			font-size: 24px;
+			margin: 28px auto;
+		}
+
+		.card-rodape {
+			font-size: 16px;
+		}
 	}
 
 	@media screen and (max-width: 1280px) {
@@ -107,6 +240,10 @@
 
 		.container-conteudo img {
 			margin: 18px auto;
+		}
+
+		.card-rodape {
+			font-size: 16px;
 		}
 	}
 
@@ -138,6 +275,31 @@
 		.container-conteudo img {
 			margin: 16px auto;
 			width: 120px;
+		}
+
+		.card {
+			padding: 8px 28px;
+		}
+
+		.titulo {
+			font-size: 24px;
+		}
+
+		.usuario,
+		.senha {
+			font-size: 18px;
+		}
+
+		.card-input {
+			height: 32px;
+		}
+
+		.card-button {
+			font-size: 18px;
+			margin: 20px auto;
+		}
+		.card-rodape {
+			font-size: 14px;
 		}
 	}
 </style>
