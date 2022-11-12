@@ -26,6 +26,7 @@
 	.conteudo {
 		background-color: #f2e0d3;
 		border-radius: 30px;
+		box-shadow: 0px 4px 4px #c57339;
 		height: 184px;
 		padding: 24px;
 		width: 512px;
