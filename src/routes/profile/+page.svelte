@@ -21,9 +21,9 @@
 <div class="trilhas">
 	<p>Meus Cursos</p>
 	<div class="trilhas-cadastradas">
-		<TrilhaInterna linha1="Full" linha2="Stack" />
-		<TrilhaInterna linha1="UX/UI" linha2="Design" />
-		<TrilhaInterna linha1="QA" linha2="(Quality&ensp;Assurance)" />
+		<TrilhaInterna url="/profile/trilha" linha1="Full" linha2="Stack" />
+		<TrilhaInterna url="/profile/trilha" linha1="UX/UI" linha2="Design" />
+		<TrilhaInterna url="/profile/trilha" linha1="QA" linha2="(Quality&ensp;Assurance)" />
 	</div>
 </div>
 
