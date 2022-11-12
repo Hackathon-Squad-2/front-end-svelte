@@ -1,7 +1,7 @@
 <nav>
 	<a href="/">Home</a>
 	<a href="/trilhas">Sobre as trilhas</a>
-	<input type="text" />
+	<input type="text" placeholder="&#128269;" />
 </nav>
 
 <style>
@@ -30,9 +30,19 @@
 		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 		font-size: 24px;
 		height: 56px;
-		margin-right: 32px;
+		margin: 0 32px;
 		padding: 0 16px;
 		width: 216px;
+	}
+
+	@media screen and (max-width: 1600px) {
+		nav {
+			margin-top: 16px;
+		}
+
+		nav a {
+			font-size: 24px;
+		}
 	}
 
 	@media screen and (max-width: 1366px) {
