@@ -1,5 +1,5 @@
 <nav>
-	<a href="/">Home</a>
+	<a href="/profile">Home</a>
 	<a href="/trilhas">Sobre as trilhas</a>
 	<input type="text" placeholder="&#128269;" />
 </nav>
