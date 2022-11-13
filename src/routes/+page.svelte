@@ -1,8 +1,34 @@
-<script>
+<script lang="ts">
 	import Nav from '$lib/components/Nav.svelte';
+	import { api } from '../services/api.js';
 
 	import '../app.css';
 	import '../reset.css';
+
+	let email = '';
+	let password = '';
+	let result = null;
+	let resultParse = null;
+	let erro = '';
+
+	async function login() {
+		const res = await api
+			.post('/users/auth/login', {
+				email: email,
+				password: password
+			})
+			.catch((r) => {
+				if (r.response.status == 400) erro = 'Usuário ou senha incorretos.';
+			});
+
+		const json = await res;
+		result = JSON.stringify(json);
+		resultParse = JSON.parse(result);
+
+		if (resultParse.data.user) {
+			return window.location.replace('/profile');
+		}
+	}
 </script>
 
 <svelte:head>
@@ -21,10 +47,17 @@
 		<div class="card">
 			<p class="titulo">Login</p>
 			<label class="usuario" for="user">Usuário</label>
-			<input class="card-input" id="user" type="text" placeholder="&#128100;" />
+			<input class="card-input" id="user" type="text" placeholder="" bind:value={email} />
 			<label class="senha" for="password">Senha</label>
-			<input class="card-input" id="password" type="password" placeholder="&#128477;" />
-			<button class="card-button" type="input">Entrar</button>
+			<input
+				class="card-input"
+				id="password"
+				type="password"
+				placeholder=""
+				bind:value={password}
+			/>
+			<p class="erro" bind:textContent={erro} contenteditable="true" />
+			<button class="card-button" type="input" on:click={login}>Entrar</button>
 			<div class="card-rodape">
 				<a href="/matricula">Criar conta</a>
 				<p>Esqueceu sua senha?</p>
@@ -116,6 +149,16 @@
 		margin: 0 auto;
 		padding: 0 16px;
 		width: 85%;
+	}
+
+	.erro {
+		color: darkred;
+		font-family: 'Reem Kufi';
+		font-size: 18px;
+		font-weight: 600;
+		margin-top: 8px;
+		text-align: center;
+		height: 18px;
 	}
 
 	.card-button {
